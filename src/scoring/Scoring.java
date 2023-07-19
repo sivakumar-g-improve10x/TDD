@@ -7,7 +7,7 @@ public class Scoring {
         for (int i = 0; i < score.length(); i++) {
             char c = score.charAt(i);
             if (c == 'A') {
-                scores[0] = 1;
+                scores[0]++;
             } else if (c == 'B') {
                 scores[1] = 1;
             } else if (c =='C') {
