@@ -39,5 +39,11 @@ public class FibonacciTest {
         int thirdFibonacci = fibonacci.findFibonacci(3);
         assertEquals(1,thirdFibonacci);
     }
+    @Test
+    public void givenFour_returnTwo() {
+        Fibonacci fibonacci = new Fibonacci();
+        int thirdFibonacci = fibonacci.findFibonacci(4);
+        assertEquals(2,thirdFibonacci);
+    }
     }
 
