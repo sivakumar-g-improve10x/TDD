@@ -7,6 +7,8 @@ public class Scoring {
             return new int[]{1,0,0};
         } else if (score.equals("B")) {
             return new int[]{0,1,0};
+        } else if (score.equals("C")) {
+            return new int[]{0,0,1};
         }
         return new int[3];
     }
