@@ -12,7 +12,7 @@ public class FibonacciTest {
     @Test
     public void givenAnyNegativeInteger_returnNegativeOne() {
         Fibonacci fibonacci = new Fibonacci();
-        int negativeFibonacci = fibonacci.findFibonacci(-5);
+        int negativeFibonacci = fibonacci.findFibonacci(-15);
         assertEquals(-1,negativeFibonacci);
         }
     @Test
@@ -32,6 +32,12 @@ public class FibonacciTest {
         Fibonacci fibonacci = new Fibonacci();
         int secondFibonacci = fibonacci.findFibonacci(2);
         assertEquals(1,secondFibonacci);
+    }
+    @Test
+    public void givenThree_returnOne() {
+        Fibonacci fibonacci = new Fibonacci();
+        int thirdFibonacci = fibonacci.findFibonacci(3);
+        assertEquals(1,thirdFibonacci);
     }
     }
 
