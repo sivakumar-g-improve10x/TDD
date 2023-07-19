@@ -11,7 +11,7 @@ public class Scoring {
             } else if (c == 'B') {
                 scores[1] ++;
             } else if (c =='C') {
-                scores[2] = 1;
+                scores[2] ++;
             }
         }
         return scores;
