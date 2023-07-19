@@ -15,5 +15,11 @@ public class FibonacciTest {
         int negativeFibonacci = fibonacci.findFibonacci(-5);
         assertEquals(-1,negativeFibonacci);
         }
+    @Test
+    public void givenAnyZero_returnNegativeOne() {
+        Fibonacci fibonacci = new Fibonacci();
+        int negativeFibonacci = fibonacci.findFibonacci(0);
+        assertEquals(-1,negativeFibonacci);
+    }
     }
 
