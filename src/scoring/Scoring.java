@@ -3,13 +3,17 @@ package scoring;
 public class Scoring {
 
     public int[] calculateScore(String score) {
-        if (score.equals("A")){
-            return new int[]{1,0,0};
-        } else if (score.equals("B")) {
-            return new int[]{0,1,0};
-        } else if (score.equals("C")) {
-            return new int[]{0,0,1};
+        int[] scores = new int[3];
+        for (int i = 0; i < score.length(); i++) {
+            char c = score.charAt(i);
+            if (c == 'A') {
+                scores[0] = 1;
+            } else if (c == 'B') {
+                scores[1] = 1;
+            } else if (score.equals("C")) {
+                return new int[]{0, 0, 1};
+            }
         }
-        return new int[3];
+        return scores;
     }
 }
