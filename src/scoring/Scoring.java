@@ -10,8 +10,8 @@ public class Scoring {
                 scores[0] = 1;
             } else if (c == 'B') {
                 scores[1] = 1;
-            } else if (score.equals("C")) {
-                return new int[]{0, 0, 1};
+            } else if (c =='C') {
+                scores[2] = 1;
             }
         }
         return scores;

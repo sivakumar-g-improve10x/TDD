@@ -46,4 +46,9 @@ public class ScoringTest {
         int[] abScore = scoring.calculateScore("AB");
         assertArrayEquals(new int[]{1,1,0},abScore);
     }
+    @Test
+    public void givenABC_returnsAllOne(){
+        int[] abcScore = scoring.calculateScore("ABC");
+        assertArrayEquals(new int[]{1,1,1},abcScore);
+    }
 }
