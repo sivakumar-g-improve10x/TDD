@@ -45,5 +45,11 @@ public class FibonacciTest {
         int thirdFibonacci = fibonacci.findFibonacci(4);
         assertEquals(2,thirdFibonacci);
     }
+    @Test
+    public void givenFive_returnTwo() {
+        Fibonacci fibonacci = new Fibonacci();
+        int thirdFibonacci = fibonacci.findFibonacci(5);
+        assertEquals(3,thirdFibonacci);
+    }
     }
 
