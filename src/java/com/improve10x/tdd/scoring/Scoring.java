@@ -9,9 +9,9 @@ public class Scoring {
             if (c == 'A') {
                 scores[0]++;
             } else if (c == 'B') {
-                scores[1] ++;
-            } else if (c =='C') {
-                scores[2] ++;
+                scores[1]++;
+            } else if (c == 'C') {
+                scores[2]++;
             }
         }
         return scores;

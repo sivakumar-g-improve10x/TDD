@@ -9,66 +9,78 @@ public class ScoringTest {
     private Scoring scoring;
 
     @BeforeEach
-    public void setup(){
-            scoring = new Scoring();
+    public void setup() {
+        scoring = new Scoring();
     }
+
     @Test
-    public void nothing(){
+    public void nothing() {
 
     }
+
     @Test
-    public void givenNull_returnsAllZeros(){
-       int[] allZeros = scoring.calculateScore(null);
-       assertArrayEquals(new int[3],allZeros);
+    public void givenNull_returnsAllZeros() {
+        int[] allZeros = scoring.calculateScore(null);
+        assertArrayEquals(new int[3], allZeros);
     }
+
     @Test
-    public void givenEmpty_returnsAllZeros(){
+    public void givenEmpty_returnsAllZeros() {
         int[] allZeros = scoring.calculateScore("");
-        assertArrayEquals(new int[3],allZeros);
+        assertArrayEquals(new int[3], allZeros);
     }
+
     @Test
-    public void givenA_returnsOneZeroZero(){
+    public void givenA_returnsOneZeroZero() {
         int[] onlyAScore = scoring.calculateScore("A");
-        assertArrayEquals(new int[]{1,0,0},onlyAScore);
+        assertArrayEquals(new int[]{1, 0, 0}, onlyAScore);
     }
+
     @Test
-    public void givenB_returnsZeroOneZero(){
+    public void givenB_returnsZeroOneZero() {
         int[] onlyBScore = scoring.calculateScore("B");
-        assertArrayEquals(new int[]{0,1,0},onlyBScore);
+        assertArrayEquals(new int[]{0, 1, 0}, onlyBScore);
     }
+
     @Test
-    public void givenC_returnsZeroZeroOne(){
+    public void givenC_returnsZeroZeroOne() {
         int[] onlyCScore = scoring.calculateScore("C");
-        assertArrayEquals(new int[]{0,0,1},onlyCScore);
+        assertArrayEquals(new int[]{0, 0, 1}, onlyCScore);
     }
+
     @Test
-    public void givenAB_returnsZeroZeroOne(){
+    public void givenAB_returnsZeroZeroOne() {
         int[] abScore = scoring.calculateScore("AB");
-        assertArrayEquals(new int[]{1,1,0},abScore);
+        assertArrayEquals(new int[]{1, 1, 0}, abScore);
     }
+
     @Test
-    public void givenABC_returnsAllOne(){
+    public void givenABC_returnsAllOne() {
         int[] abcScore = scoring.calculateScore("ABC");
-        assertArrayEquals(new int[]{1,1,1},abcScore);
+        assertArrayEquals(new int[]{1, 1, 1}, abcScore);
     }
+
     @Test
-    public void givenAABC_returnsAllOne(){
+    public void givenAABC_returnsAllOne() {
         int[] aabcScore = scoring.calculateScore("AABC");
-        assertArrayEquals(new int[]{2,1,1},aabcScore);
+        assertArrayEquals(new int[]{2, 1, 1}, aabcScore);
     }
+
     @Test
-    public void givenABBC_returnsAllOne(){
+    public void givenABBC_returnsAllOne() {
         int[] abbcScore = scoring.calculateScore("ABBC");
-        assertArrayEquals(new int[]{1,2,1},abbcScore);
+        assertArrayEquals(new int[]{1, 2, 1}, abbcScore);
     }
+
     @Test
-    public void givenABCC_returnsAllOne(){
+    public void givenABCC_returnsAllOne() {
         int[] abccScore = scoring.calculateScore("ABCC");
-        assertArrayEquals(new int[]{1,1,2},abccScore);
+        assertArrayEquals(new int[]{1, 1, 2}, abccScore);
     }
+
     @Test
-    public void givenABBACCCCAC_returnsThreeTwoFive(){
+    public void givenABBACCCCAC_returnsThreeTwoFive() {
         int[] abbaccccacScore = scoring.calculateScore("ABBACCCCAC");
-        assertArrayEquals(new int[]{1,2,1},abbaccccacScore);
+        assertArrayEquals(new int[]{1, 2, 1}, abbaccccacScore);
     }
 }
