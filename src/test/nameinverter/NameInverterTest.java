@@ -59,4 +59,9 @@ public class NameInverterTest {
         String invertName = nameInverter.invertName("first last MSc. PhD");
         assertEquals("last, first MSc. PhD",invertName);
     }
+    @Test
+    public void givenIntegrationTest() {
+        String invertName = nameInverter.invertName("Mr. Bob Martins MTech. PhD.");
+        assertEquals("Martins, Bob MTech. PhD.", invertName);
+    }
 }
