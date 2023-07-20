@@ -1,4 +1,4 @@
-package scoring;
+package com.improve10x.tdd.scoring;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

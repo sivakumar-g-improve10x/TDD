@@ -1,4 +1,4 @@
-package scoring;
+package com.improve10x.tdd.scoring;
 
 public class Scoring {
 

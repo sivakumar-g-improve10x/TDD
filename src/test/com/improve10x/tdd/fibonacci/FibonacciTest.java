@@ -1,4 +1,4 @@
-package fibonacci;
+package com.improve10x.tdd.fibonacci;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
