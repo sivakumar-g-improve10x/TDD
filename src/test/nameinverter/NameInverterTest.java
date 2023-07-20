@@ -29,4 +29,9 @@ public class NameInverterTest {
         String invertedName = nameInverter.invertName("siv");
         assertEquals("siv", invertedName);
     }
+    @Test
+    public void givenSingleWordWithTrailingSpaces_returnSingleWord() {
+        String invertedName = nameInverter.invertName("siv  ");
+        assertEquals("siv", invertedName);
+    }
 }
