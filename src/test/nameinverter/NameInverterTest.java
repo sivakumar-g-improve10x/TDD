@@ -54,4 +54,9 @@ public class NameInverterTest {
         String invertName = nameInverter.invertName("first last MSc.");
         assertEquals("last, first MSc.",invertName);
     }
+    @Test
+    public void givenMultiPostNominals_stayAndEnd() {
+        String invertName = nameInverter.invertName("first last MSc. PhD");
+        assertEquals("last, first MSc. PhD",invertName);
+    }
 }
