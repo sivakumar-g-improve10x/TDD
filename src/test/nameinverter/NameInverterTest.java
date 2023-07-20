@@ -34,4 +34,19 @@ public class NameInverterTest {
         String invertedName = nameInverter.invertName("siv  ");
         assertEquals("siv", invertedName);
     }
+    @Test
+    public void givenSingleWordWithBeginningSpaces_returnSingleWord() {
+        String invertedName = nameInverter.invertName("  siv  ");
+        assertEquals("siv", invertedName);
+    }
+    @Test
+    public void givenFirstLast_returnInvertedName() {
+        String invertedName = nameInverter.invertName("first last");
+        assertEquals("last, first",invertedName);
+    }
+    @Test
+    public void givenHonorifics_returnHonorifics() {
+        String invertedName = nameInverter.invertName("Mrs. first last");
+        assertEquals("last, first",invertedName);
+    }
 }
