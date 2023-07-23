@@ -2,7 +2,10 @@ package com.improve10x.tdd.bowling;
 
 import bowling.Game;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class GameTest {
@@ -22,9 +25,7 @@ public class GameTest {
     }
     @Test
     public void gutterGame() {
-        int noOfRolls = 20;
-        int pins = 0;
-        rollMany(noOfRolls, pins);
+        rollMany(20,0);
         assertEquals(0,game.score());
     }
 
@@ -38,5 +39,21 @@ public class GameTest {
     public void allOne() {
         rollMany(20, 1);
         assertEquals(20,game.score());
+    }
+    @Test
+    public void oneSpare() {
+        game.roll(5);
+        game.roll(5);
+        game.roll(4);
+        rollMany(17,0);
+        assertEquals(18,game.score());
+    }
+    @Test
+    public void oneStrike() {
+       game.roll(10);
+       game.roll(4);
+       game.roll(2);
+       rollMany(16,0);
+       assertEquals(22,game.score());
     }
 }
