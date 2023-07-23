@@ -1,4 +1,4 @@
-package nameinverter;
+package com.improve10x.tdd.nameinverter;
 
 import java.util.ArrayList;
 import java.util.Arrays;

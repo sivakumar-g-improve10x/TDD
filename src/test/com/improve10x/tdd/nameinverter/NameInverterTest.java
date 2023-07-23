@@ -1,5 +1,6 @@
-package nameinverter;
+package com.improve10x.tdd.nameinverter;
 
+import com.improve10x.tdd.nameinverter.NameInverter;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -46,7 +47,7 @@ public class NameInverterTest {
     }
     @Test
     public void givenHonorifics_returnHonorifics() {
-        String invertedName = nameInverter.invertName("Mr. first last");
+        String invertedName = nameInverter.invertName("Miss. first last");
         assertEquals("last, first",invertedName);
     }
     @Test
