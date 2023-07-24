@@ -1,4 +1,4 @@
-package com.improve10x.tdd;
+package com.improve10x.tdd.templerun;
 
 public class Player extends Character{
     private int score;
