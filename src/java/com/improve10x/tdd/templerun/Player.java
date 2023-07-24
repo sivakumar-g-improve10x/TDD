@@ -11,6 +11,7 @@ public class Player extends Character{
         System.out.println("Running....");
     }
     public void jump() {
+
         System.out.println(getName() + "jumped to void obstacle !");
     }
 
@@ -18,6 +19,7 @@ public class Player extends Character{
         return score;
     }
     public void collectCoin(Coin coin) {
+        System.out.println("Collected coin of value");
         this.score += coin.getValue();
     }
 }

@@ -1,8 +1,8 @@
 package com.improve10x.tdd.templerun;
 
 public class Obstacle {
-    public String name;
-    public int damage;
+    protected String name;
+    protected int damage;
 
     public Obstacle(String name, int damage) {
         this.name = name;

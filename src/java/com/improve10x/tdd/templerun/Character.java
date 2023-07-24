@@ -1,8 +1,8 @@
 package com.improve10x.tdd.templerun;
 
 public class Character {
-    public String name;
-    public int health;
+    protected String name;
+    protected int health;
 
     public Character(String name, int health) {
         this.name = name;

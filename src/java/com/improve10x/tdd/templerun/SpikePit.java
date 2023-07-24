@@ -1,9 +1,9 @@
 package com.improve10x.tdd.templerun;
 
-public class spikePit extends Obstacle{
+public class SpikePit extends Obstacle{
     private int width;
 
-    public spikePit(int width) {
+    public SpikePit(int width) {
         super("Spike Pit",50);
         this.width = width;
     }
