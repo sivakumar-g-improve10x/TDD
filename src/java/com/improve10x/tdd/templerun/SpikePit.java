@@ -21,7 +21,7 @@ public class SpikePit extends Obstacle{
         return width;
     }
 
-    public class InvalidValueException extends Exception{
+    public static class InvalidValueException extends Exception{
 
     }
 }
