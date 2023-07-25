@@ -1,5 +1,6 @@
 package templerun;
 
+import com.improve10x.tdd.templerun.Coin;
 import com.improve10x.tdd.templerun.Player;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -68,5 +69,16 @@ public class PlayerTest {
         Player player = new Player("Name",100);
         Player.run();
         assertEquals("Running...!",outputStream.toString().trim());
+    }
+    @Test
+    public void whenGetScoreCalled_Return0() throws Player.InvalidHealthException{
+        Player player = new Player("Name");
+        assertEquals(0,player.getScore());
+    }
+    @Test
+    public void givenCoin10_whenGetScoreCalled_thenReturn10() throws Player.InvalidHealthException{
+        Player player = new Player("Name");
+        player.collectCoin(new Coin(10));
+        assertEquals(10,player.getScore());
     }
 }
