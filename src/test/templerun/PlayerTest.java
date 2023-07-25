@@ -94,4 +94,10 @@ public class PlayerTest {
         player.jump();
         assertEquals("Name jumped to avoid obstacle!",outputStream.toString().trim());
     }
+    @Test
+    public void givenHealth100_whenJumpCalled_displaysJumpingMessage() throws Player.InvalidHealthException{
+        Player player = new Player("Name",100);
+        player.jump();
+        assertEquals("Name jumped to avoid obstacle!",outputStream.toString().trim());
+    }
 }
