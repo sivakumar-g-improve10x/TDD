@@ -17,7 +17,11 @@ public class CoinTest {
                 () -> new Coin(-1),"Coin value should be between 0 to 100");
     }
     @Test
-    public void given10_WhenGetValueCalled_thenReturn() {
+    public void given10_WhenGetValueCalled_thenReturn10() {
         assertEquals(10,new Coin(10).getValue());
+    }
+    @Test
+    public void given20_WhenGetValueCalled_thenReturn20() {
+        assertEquals(20,new Coin(20).getValue());
     }
 }
