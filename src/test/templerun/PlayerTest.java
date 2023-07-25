@@ -10,14 +10,18 @@ public class PlayerTest {
 
     }
     @Test
-    public void givenNameNull_whenNameGetCalled_thenReturnEmpty(){
+    public void givenNameNull_whenNameGetCalled_thenReturnEmpty() {
         Player player = new Player(null);
         assertEquals("",player.getName());
     }
     @Test
-    public void givenNameEmpty_whenNameGetCalled_thenReturnEmpty(){
+    public void givenNameEmpty_whenNameGetCalled_thenReturnEmpty() {
         Player player = new Player("");
         assertEquals("",player.getName());
     }
-
+    @Test
+    public void givenNameExplorer_whenNameGetCalled_thenReturnExplorer() {
+        Player player = new Player("Explorer");
+        assertEquals("Explorer",player.getName());
+    }
 }
