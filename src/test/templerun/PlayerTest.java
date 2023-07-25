@@ -81,4 +81,17 @@ public class PlayerTest {
         player.collectCoin(new Coin(10));
         assertEquals(10,player.getScore());
     }
+    @Test
+    public void givenCoin10and20_whenGetScoreCalled_thenReturn30() throws Player.InvalidHealthException{
+        Player player = new Player("Name");
+        player.collectCoin(new Coin(30));
+        player.run();
+        assertEquals(30,player.getScore());
+    }
+    @Test
+    public void whenGetJumpCalled_displaysJumpingMessage() throws Player.InvalidHealthException{
+        Player player = new Player("Name");
+        player.jump();
+        assertEquals("Name jumped to avoid obstacle!",outputStream.toString().trim());
+    }
 }

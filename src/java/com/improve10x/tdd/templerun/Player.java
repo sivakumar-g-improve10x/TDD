@@ -34,11 +34,15 @@ public class Player {
 
     public int getScore() {
 
-        return 10;
+        return score;
     }
 
     public void collectCoin(Coin coin) {
-        this.score = coin.getValue();
+        this.score += coin.getValue();
+    }
+
+    public void jump() {
+        System.out.println(name + " jumped to avoid obstacle!");
     }
 
     public class InvalidHealthException extends RuntimeException{
