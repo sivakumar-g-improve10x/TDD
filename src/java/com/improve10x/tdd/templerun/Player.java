@@ -1,4 +1,4 @@
-package templerun;
+package com.improve10x.tdd.templerun;
 
 public class Player {
     private String name;

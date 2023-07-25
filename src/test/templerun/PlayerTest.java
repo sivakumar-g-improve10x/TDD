@@ -1,5 +1,6 @@
 package templerun;
 
+import com.improve10x.tdd.templerun.Player;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
