@@ -16,6 +16,10 @@ public class Player {
         }
         }
 
+    public static void run() {
+        System.out.println("Running...!");
+    }
+
 
     public String getName() {
         return name;

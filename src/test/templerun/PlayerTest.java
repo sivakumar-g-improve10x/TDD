@@ -1,12 +1,22 @@
 package templerun;
 
 import com.improve10x.tdd.templerun.Player;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class PlayerTest {
+    private ByteArrayOutputStream outputStream;
+    @BeforeEach
+    public void setup() {
+        outputStream = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outputStream));
+    }
     @Test
     public void nothing() {
 
@@ -52,5 +62,11 @@ public class PlayerTest {
     public void givenHealth90_whenNameGetCalled_thenReturn90() throws Player.InvalidHealthException{
         Player player = new Player("Name",90);
         assertEquals(90,player.getHealth());
+    }
+    @Test
+    public void whenRunCalled_displayRunningMessage() throws Player.InvalidHealthException{
+        Player player = new Player("Name",100);
+        Player.run();
+        assertEquals("Running...!",outputStream.toString().trim());
     }
 }
