@@ -48,4 +48,9 @@ public class PlayerTest {
         Player player = new Player("Name",100);
         assertEquals(100,player.getHealth());
     }
+    @Test
+    public void givenHealth90_whenNameGetCalled_thenReturn90() throws Player.InvalidHealthException{
+        Player player = new Player("Name",90);
+        assertEquals(90,player.getHealth());
+    }
 }
