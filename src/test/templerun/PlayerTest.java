@@ -4,6 +4,7 @@ import com.improve10x.tdd.templerun.Player;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class PlayerTest {
     @Test
@@ -34,5 +35,12 @@ public class PlayerTest {
     public void givenNoHealth_whenNameGetCalled_thenReturn100() {
         Player player = new Player("Name");
         assertEquals(100,player.getHealth());
+    }
+    @Test
+    public void givenNoHealthMinusOne_thenThrowsInvalidException() {
+        assertThrows(Player.InvalidHealthException.class,
+                () -> new Player("Name",-1),
+                "Health should be between 0 and 100");
+
     }
 }
