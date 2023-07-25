@@ -26,4 +26,9 @@ public class SpikePitTest {
     public void given10_WhenGetValueCalled_thenReturn10() throws SpikePit.InvalidValueException {
         assertEquals(10,new SpikePit(10).getValue());
     }
+    @Test
+    public void given37_WhenGetValueCalled_thenReturn37() {
+
+        assertEquals(37,new Fireball(37).getValue());
+    }
 }
