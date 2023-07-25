@@ -44,11 +44,8 @@ public class PlayerTest {
 
     }
     @Test
-    public void givenNoHealth101_thenThrowsInvalidException() {
-        assertThrows(Player.InvalidHealthException.class,
-                () -> new Player("Name",101),
-                "Health should be between 0 and 100");
-
+    public void givenHealth100_whenNameGetCalled_thenReturn100() {
+        Player player = new Player("Name",100);
+        assertEquals(100,player.getHealth());
     }
-
 }

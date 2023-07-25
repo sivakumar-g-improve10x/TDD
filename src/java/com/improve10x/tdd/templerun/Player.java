@@ -7,7 +7,9 @@ public class Player {
     }
 
     public Player(String name, int health) {
-        throw new InvalidHealthException();
+        if (health<0||health>100) {
+            throw new InvalidHealthException();
+        }
     }
 
     public String getName() {
